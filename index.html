@@ -3,10 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="WDD 131 – Dynamic Web Fundamentals. Jerwin Ronda. Learn HTML, CSS, JavaScript, and build dynamic web projects."
+    />
+    <meta name="author" content="Jerwin Ronda" />
+    <title>WDD 131 – Dynamic Web Fundamentals – Jerwin Ronda</title>
+    <link rel="stylesheet" href="styles/base.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="scripts/getdates.js" defer></script>
   </head>
   <body>
-    <h1>WDD 131</h1>
-    <p>Jerwin Ronda</p>
+    <header>
+      <h1 id="course-title">
+        WDD 131: Dynamic Web Fundamentals - <span class="myname">Jerwin Ronda</span>
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/jerwin-ronda/">LinkedIn</a>
+          </li>
+          <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+          <li>
+            <a
+              href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/19?lang=eng#:~:text=9%20And%20the,children%20of%20men."
+              >Scripture</a
+            >
+          </li>
+          <li><a href="#">Final Project</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-sections">
+        <section class="card">
+          <h2 class="main-h2">About Me</h2>
+          <img src="images/profile-pic.jpg" alt="Jerwin Ronda's photo" id="section-first-pic" />
+          <p>
+            My name is Jerwin Ronda. I was born and raised in the Philippines,
+            and I currently live in Oroquieta City, in the province of Misamis
+            Occidental. I’m not working at the moment, but I’m actively
+            searching for student-friendly jobs that allow me to stay focused on
+            my studies. I’m 25 years old and committed to building a career in
+            web development.
+          </p>
+          <p class="birth-place">Oroquieta, Philippines</p>
+          <figure id="figure-main">
+            <img
+              src="images/philippine-flag.jpg"
+              alt="Philippines flag"
+              id="section-second-pic"
+            />
+            <figcaption>Official Flag of Philippines</figcaption>
+          </figure>
+          <p>
+            The Philippines is an archipelago in Southeast Asia made up of over
+            7,600 islands, known for its rich biodiversity and stunning natural
+            landscapes. Its culture is a vibrant blend of indigenous traditions,
+            Spanish colonial influence, and modern global trends.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2 class="main-h2">Web Dev Resources</h2>
+          <ul class="section-ul">
+            <li><a href="">Dev.to Community</a></li>
+            <li><a href="">Smashing Magazine</a></li>
+            <li><a href="">CS Tricks</a></li>
+            <li><a href="">W3 Schools</a></li>
+            <li><a href="">Udemy</a></li>
+            <li><a href="">Image Placeholder</a></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p class="footer-p1">
+        &copy;<span id="currentyear"></span>Jerwin Ronda, Philippines
+      </p>
+      <p id="lastModified"></p>
+    </footer>
   </body>
 </html>
