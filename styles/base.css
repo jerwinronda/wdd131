@@ -31,7 +31,7 @@ footer {
 }
 
 .myname {
-  color: #00FFFF;
+  color: #00ffff;
   font-size: 1.6rem;
 }
 
@@ -53,6 +53,10 @@ nav a {
   text-decoration: none;
   color: #1a1a2b;
   font-size: 400;
+}
+
+nav a:hover {
+  border-bottom: 1px  solid #f5f7fa;
 }
 
 nav,
@@ -130,7 +134,7 @@ p {
 }
 
 #lastModified {
-  color: #00FFFF;;
+  color: #00ffff;
   padding: 5px;
   font-weight: 300;
   margin-top: 10px;
