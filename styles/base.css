@@ -10,12 +10,17 @@ body {
   color: #000000;
 }
 
-header,
+header {
+  font-family: "Open Sans", sans-serif;
+  background-color: #1a1a2b;
+  color: #f5f7fa;
+  text-align: center;
+}
+
 h2 {
   font-family: "Open Sans", sans-serif;
 }
 
-header,
 h2,
 footer {
   background-color: #1a1a2b;
@@ -52,11 +57,11 @@ nav ul li {
 nav a {
   text-decoration: none;
   color: #1a1a2b;
-  font-size: 400;
+  font-size: 1rem;
 }
 
 nav a:hover {
-  border-bottom: 1px  solid #f5f7fa;
+  border-bottom: 1px solid #f5f7fa;
 }
 
 nav,
