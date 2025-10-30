@@ -15,7 +15,9 @@ header {
   background-color: #1a1a2b;
   color: #f5f7fa;
   text-align: center;
+  display: block;
 }
+h1{padding: 1rem;}
 
 h2 {
   font-family: "Open Sans", sans-serif;
@@ -29,8 +31,6 @@ footer {
 }
 
 #course-title {
-  display: block;
-  padding: 1rem;
   font-weight: 400;
   font-size: 2rem;
 }
