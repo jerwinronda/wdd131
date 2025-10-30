@@ -17,7 +17,9 @@ header {
   text-align: center;
   display: block;
 }
-h1{padding: 1rem;}
+h1{
+  padding: 1rem;
+}
 
 h2 {
   font-family: "Open Sans", sans-serif;
