@@ -1,64 +1,137 @@
+@media (max-width: 600px) {
+  nav {
+    padding: 1rem;
+  }
+
+  footer {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+  }
+}
+
 :root {
   --primary-color: #004d40;
   --accent-color: #ffcc00;
   --font-main: "Roboto", sans-serif;
   --font-heading: "Playfair Display", serif;
-  --spacing: 1rem;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-nav ul {
-  display: flex;
-}
-
-nav li {
-  flex: 1 1 100%;
-  list-style: none;
-}
-
-nav a {
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  background-color: aliceblue;
-  color: antiquewhite;
-  cursor: pointer;
 }
 
 body {
-  max-width: 414px;
-  margin: 0 auto;
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
 }
 
-.main-home {
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+header span {
+  margin: 0;
+}
+
+/* Ensure full-width layout for nav and footer */
+header,
+nav,
+footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix nav layout inside header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Ensure nav stretches and centers links */
+nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  width: 100%;
+}
+
+nav.show {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #00695c;
+}
+
+nav a:hover {
+  background-color: #00695c;
+}
+
+/* Footer full width and centered */
+footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.grid-gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-}
-h1 {
-  text-align: center;
+  overflow: hidden;
 }
 
-#lastModified {
-  color: #00ffff;
-  padding: 5px;
-  font-weight: 300;
-  margin-top: 10px;
+.grid-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-footer {
-  margin: 1rem;
-  padding: 2rem;
-  font-size: large;
+figure {
+  margin: 0;
+  background: white;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+figcaption {
   text-align: center;
-  line-height: 0.5rem;
-  background-color: #1a1a2b;
-  color: #f5f7fa;
-  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
 }
