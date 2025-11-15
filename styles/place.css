@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #d62d20;
+  --primary-color: #8b0000;
   --secondary-color: #007e3a;
   --background-color: #fff;
   --text-color: #333;
@@ -13,11 +13,18 @@ body {
   color: var(--text-color);
 }
 
-header,
-footer {
+header {
   text-align: center;
   background-color: var(--primary-color);
-  color: white;
+  color: #fff;
+  padding: 1rem;
+}
+
+footer {
+  color: #fff;
+  font-weight: bolder;
+  text-align: center;
+  background-color: var(--primary-color);
   padding: 1rem;
 }
 
