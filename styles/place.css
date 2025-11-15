@@ -48,7 +48,7 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 ul li {
@@ -97,8 +97,8 @@ footer {
 
   .data h2 {
     display: block;
-    background-color: var(--secondary-color);
-    color: rgba(255, 255, 255, 0.95);
+    background-color: var(--primary-color);
+    color: #fff;
     text-align: left;
     margin-left: -40px;
     padding: 10px;
@@ -108,7 +108,7 @@ footer {
     position: absolute;
     top: 455px;
     right: 30px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.65);
     padding: 1rem 2rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -119,8 +119,8 @@ footer {
   }
   .weather h2 {
     display: block;
-    background-color: var(--secondary-color);
-    color: rgba(255, 255, 255, 0.95);
+    background-color: var(--primary-color);
+    color: #fff;
     text-align: left;
     margin-left: -40px;
     padding: 10px;
