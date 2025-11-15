@@ -1,0 +1,136 @@
+:root {
+  --primary-color: #d62d20;
+  --secondary-color: #007e3a;
+  --background-color: #fff;
+  --text-color: #333;
+  --font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header,
+footer {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* main {
+  padding: 1rem;
+} */
+
+section {
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+}
+
+ul li {
+  list-style: none;
+}
+
+.weather {
+  margin-top: 2rem;
+  border-top: beige 1px solid;
+}
+
+footer {
+  line-height: 1;
+}
+
+@media (min-width: 1025px) {
+  .weather-icon::after {
+    content: "⛅";
+    font-size: 1.5rem;
+  }
+
+  .mobile-icon {
+    display: none;
+    width: 40px;
+    height: auto;
+    margin-top: 0.5rem;
+  }
+
+  .hero {
+    position: relative;
+  }
+
+  .data {
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 250px;
+    padding-top: 1rem;
+    line-height: 2;
+  }
+
+  .data h2 {
+    display: block;
+    background-color: var(--secondary-color);
+    color: rgba(255, 255, 255, 0.95);
+    text-align: left;
+    margin-left: -40px;
+    padding: 10px;
+  }
+
+  .weather {
+    position: absolute;
+    top: 455px;
+    right: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 250px;
+    padding-top: 1rem;
+    line-height: 2;
+  }
+  .weather h2 {
+    display: block;
+    background-color: var(--secondary-color);
+    color: rgba(255, 255, 255, 0.95);
+    text-align: left;
+    margin-left: -40px;
+    padding: 10px;
+  }
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  /* h2 .weather-icon::after {
+    content: "🌦️";
+  } */
+
+  .weather img {
+    width: 100px;
+  }
+
+  .mobile-icon {
+    display: inline;
+  }
+}

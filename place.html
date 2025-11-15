@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Country profile page for Madagascar featuring weather and geographic data."
+    />
+    <title>Madagascar</title>
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Switzerland</h1>
+    </header>
+
+    <main>
+      <section class="hero">
+        <picture>
+          <source
+            srcset="images/switzerland-large.webp"
+            media="(min-width: 1025px)"
+          />
+          <img
+            src="images/switzerland-mobile1.webp"
+            alt="Lemurs in Madagascar"
+          />
+        </picture>
+      </section>
+
+      <section class="data">
+        <h2>Data</h2>
+        <ul class="data-ul">
+          <li class="data-li"><strong>Area:</strong> 41,290 sq km</li>
+          <li class="data-li">
+            <strong>Population:</strong> Approximately 8.9 million
+          </li>
+          <li class="data-li"><strong>Capital:</strong> Bern</li>
+          <li class="data-li">
+            <strong>Languages:</strong> German, French, Italian, Romansh
+          </li>
+          <li class="data-li"><strong>Currency:</strong> Swiss Franc (CHF)</li>
+          <li class="data-li"><strong>Time Zone:</strong> UTC+01:00</li>
+          <li class="data-li"><strong>Calling Code:</strong> +41</li>
+          <li class="data-li"><strong>Internet TLD:</strong> .ch</li>
+        </ul>
+      </section>
+      <section class="weather">
+        <h2>Weather <span class="weather-icon" aria-hidden="true"></span></h2>
+        <img
+          src="images/weather-icon.svg"
+          alt="Partly Cloudy Icon"
+          class="mobile-icon"
+        />
+        <ul>
+          <li><strong>Temperature:</strong> 10°C</li>
+          <li><strong>Conditions:</strong> Partly Cloudy</li>
+          <li><strong>Wind:</strong> 5 km/h</li>
+          <li>
+            <strong>Wind Chill:</strong>
+            <span id="windchill">Calculating...</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Jerwin Ronda</p>
+      <p>Switzerland</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+  </body>
+</html>
