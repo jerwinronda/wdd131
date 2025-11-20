@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto;
+}
+
+@keyframes fadeFromBlack {
+  from {
+    opacity: 0; /* fully transparent */
+  }
+  to {
+    opacity: 1; /* fully visible */
+  }
+}
+
+main img {
+  display: block;
+  width: 400px;
+  height: 600px;
+  background-color: #000;
+  animation: fadeFromBlack 2s ease-in;
+}
