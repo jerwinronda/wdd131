@@ -72,12 +72,12 @@ h3 {
 section p {
   text-align: center;
   line-height: 1;
+}
 
-  .label {
-    color: blueviolet;
-    font-weight: 100;
-    font-size: small;
-  }
+.label {
+  color: blueviolet;
+  font-weight: 100;
+  font-size: small;
 }
 
 section {
