@@ -1,0 +1,41 @@
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a consistent line-height and font inheritance */
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in Safari */
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Ensure images and media scale properly */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make buttons and inputs inherit font */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
