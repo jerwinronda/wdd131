@@ -15,10 +15,45 @@ html {
 
 body {
   font-family: system-ui, sans-serif;
-  background-color: #fff;
-  color: #000;
+  background-color: #f5f5f5;
+  color: #2c3e50;
+  /* color: #000; */
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
+header {
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: #1e90ff;
+}
+
+h2 {
+  margin-top: 1rem;
+}
+
+figure {
+  text-align: center; /* centers inline content like text */
+  margin: 20px 0; /* optional spacing between figures */
+}
+
+figure img {
+  display: block; /* makes the image block-level */
+  margin: 0 auto; /* centers the image horizontally */
+  max-width: 100%; /* keeps images responsive */
+  height: auto;
+}
+
+figure figcaption {
+  text-align: center; /* centers the caption text */
+  margin-top: 8px; /* spacing below the image */
+  font-style: italic; /* optional styling */
+  color: #555; /* optional caption color */
+}
 /* Remove default list styles */
 ul,
 ol {
