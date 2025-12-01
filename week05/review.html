@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles/form.css" />
+    <script>
+      window.onload = function () {
+        // Get current count or start at 0
+        let count = localStorage.getItem("reviewCount") || 0;
+        count = parseInt(count) + 1;
+
+        // Save back to localStorage
+        localStorage.setItem("reviewCount", count);
+
+        // Show it on the page
+        document.getElementById("counter").textContent = count;
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Thank you for your review!</h1>
+    <p>Total reviews submitted from this browser: <span id="counter"></span></p>
+  </body>
+</html>

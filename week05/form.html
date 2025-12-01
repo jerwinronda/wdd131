@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/form.css" />
+    <script src="scripts/form.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Product Review</h1>
+    </header>
+
+    <main>
+      <form method="get" action="review.html" class="product-review-form">
+        <label for="product"
+          >Product Name
+          <select name="product" id="product" required>
+            <option value="" disabled selected>Select a product</option>
+          </select>
+        </label>
+        <label for="fivestar"
+          >Overall Rating
+          <div class="stars">
+            <input type="radio" id="fivestar" name="stars" value="5" required />
+            <label for="fivestar">
+              <span class="sr-only">5 Stars</span>
+            </label>
+
+            <input type="radio" id="fourstar" name="stars" value="4" required />
+            <label for="fourstar">
+              <span class="sr-only">4 Stars</span>
+            </label>
+
+            <input
+              type="radio"
+              id="threestar"
+              name="stars"
+              value="3"
+              required
+            />
+            <label for="threestar">
+              <span class="sr-only">3 Stars</span>
+            </label>
+
+            <input type="radio" id="twostar" name="stars" value="2" required />
+            <label for="twostar">
+              <span class="sr-only">2 Stars</span>
+            </label>
+
+            <input type="radio" id="onestar" name="stars" value="1" required />
+            <label for="onestar">
+              <span class="sr-only">1 Star</span>
+            </label>
+          </div>
+        </label>
+        <!-- <div class="stars">
+          <input
+            type="radio"
+            id="fivestar"
+            name="stars"
+            value="5"
+            required
+          /><label for="fivestar">5stars</label>
+          <input
+            type="radio"
+            id="fourstar"
+            name="stars"
+            value="4"
+            required
+          /><label for="fourstar"></label>
+          <input
+            type="radio"
+            id="threestar"
+            name="stars"
+            value="3"
+            required
+          /><label for="threestar"></label>
+          <input
+            type="radio"
+            id="twostar"
+            name="stars"
+            value="2"
+            required
+          /><label for="twostar"></label>
+          <input
+            type="radio"
+            id="onestar"
+            name="stars"
+            value="1"
+            required
+          /><label for="onestar"></label>
+        </div> -->
+        <label for="date"
+          >Date of Installation
+          <input type="date" id="date" name="date" required />
+        </label>
+        <div>
+          Which features did you find useful in the product?<br />
+          (Check all that apply)
+        </div>
+        <label for="durability"
+          ><input
+            type="checkbox"
+            id="durability"
+            name="features"
+            value="durability"
+          />Durability</label
+        >
+
+        <label for="ease-of-use"
+          ><input
+            type="checkbox"
+            id="ease-of-use"
+            name="features"
+            value="ease-of-use"
+          />Ease of Use</label
+        >
+        <label for="performance"
+          ><input
+            type="checkbox"
+            id="performance"
+            name="features"
+            value="performance"
+          />Performance</label
+        >
+
+        <label for="design"
+          ><input
+            type="checkbox"
+            id="design"
+            name="features"
+            value="design"
+          />Design</label
+        >
+        <label for="review"
+          >Written Review (optional)
+          <textarea name="review" id="review"></textarea>
+        </label>
+        <label for="name"
+          >Your Name(optional)<input
+            type="text"
+            name="name"
+            id="name"
+            autocomplete="name"
+        /></label>
+
+        <label for="submit"
+          ><input type="submit" value="Post Review" id="submit" />
+        </label>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; <span id="year"></span> Jerwin Ronda, Philippines</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+  </body>
+</html>
