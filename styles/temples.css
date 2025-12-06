@@ -12,6 +12,14 @@
     display: block;
     width: 100%;
   }
+
+  #navbar {
+    display: none;
+  }
+
+  #navbar.show {
+    display: block;
+  }
 }
 
 :root {

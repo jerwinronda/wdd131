@@ -41,7 +41,7 @@ section {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 2rem 5%;
   background: var(--background-color);
   backdrop-filter: blur(10px);
@@ -51,6 +51,9 @@ section {
 .navbar ul {
   display: flex;
   gap: 3rem;
+  list-style: none; /* removes the default bullets */
+  margin: 0; /* reset default margin */
+  padding: 0;
 }
 
 .logo {
@@ -77,9 +80,67 @@ section {
 }
 
 #menu-icon {
-  font-size: 3.6rem;
-  color: #fff;
+  font-size: 3rem;
+  color: var(--background-color);
+  background-color: var(--second-background-color);
   cursor: pointer;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+#menu-icon:focus {
+  outline: 2px solid #000; /* visible focus for accessibility */
+}
+
+/* thank.html you main */
+.thanks-main h1 {
+  font-size: 3.2rem; /* 32px */
+  font-weight: 700;
+  color: var(--background-color); /* dark blue for contrast */
+  margin: 15rem 0 1rem;
+  text-align: center;
+  font-family: var(--heading-font);
+}
+
+.thanks-main p {
+  font-size: 1.8rem; /* 18px */
+  color: black;
+  margin: 0 auto 2rem;
+  max-width: 600px;
+  text-align: left;
+  line-height: 1.5;
+  font-family: var(--body-font);
+}
+#details-section {
+  margin-top: 2rem;
+  padding: 5rem;
+  background-color: #fff;
+  border: 1px solid var(--background-color);
+  border-radius: 8px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 50vh; /* always fills the full screen height */
+}
+
+#details-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--background-color);
+}
+
+#details {
+  list-style: none;
+  padding: 0;
+  margin-left: 15rem;
+  text-align: left;
+}
+
+#details li {
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
 }
 
 /* home section code */
@@ -113,6 +174,14 @@ section {
   100% {
     transform: translateY(0);
   }
+}
+
+img.lazy {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+img.lazy.fade-in {
+  opacity: 1;
 }
 
 .home-content {
@@ -232,7 +301,66 @@ span {
 }
 
 /* Services Section Code */
-.services h2 {
+/* Services Container */
+/* Services Container */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 2rem; /* spacing between boxes */
+  max-width: 1200px; /* keeps layout centered and neat */
+  margin: 2rem auto; /* centers container */
+  padding: 0 1rem;
+}
+
+/* Individual Service Box */
+.services-box {
+  background-color: var(--background-color);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.services-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Icon Styling */
+.services-box i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color, #00bcd4);
+}
+
+/* Heading */
+.services-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* List Styling */
+.services-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-box ul li {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+/* .services h2 {
   margin-bottom: 5rem;
 }
 
@@ -266,7 +394,7 @@ span {
 .services-box p {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
-}
+} */
 
 /* Contact Section Code */
 /* wf1 stands for web form #1 */
@@ -277,16 +405,35 @@ span {
   width: 100%;
 }
 
+.wf1 fieldset {
+  margin: 2rem 0;
+  border: 1px solid var(--background-color);
+  border-radius: 6px;
+  padding: 1rem 1rem 2rem;
+  background-color: #fff;
+}
+
+.wf1 legend {
+  padding: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.wf1 div {
+  font-size: 1.8rem;
+  padding-top: 1.6rem;
+}
+
 .wf1 label {
   display: block;
-  padding-top: 1rem;
-  font-size: 1.6rem;
+  padding-top: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .wf1 input[type="text"],
 .wf1 input[type="tel"],
 .wf1 input[type="email"],
-.wf1 textarea {
+.wf1 textarea,
+.wf1 select {
   display: block;
   border: 1px solid var(--background-color);
   border-radius: 0.6rem;
@@ -296,6 +443,10 @@ span {
   line-height: 1.5;
   width: 100%;
   max-width: 400px;
+}
+
+.wf1 input[type="radio"] {
+  margin: 0.5rem;
 }
 
 /* .wf1 input[type="submit"] {
@@ -331,7 +482,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   html {
     font-size: 55%;
   }
@@ -347,4 +498,112 @@ footer {
   .services {
     padding: 7rem;
   }
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+} */
+
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: #002147;
+    padding: 2rem;
+  }
+
+  .logo {
+    font-size: 2.4rem;
+    color: #e0ffff;
+    margin-bottom: 1rem;
+  }
+
+  #menu-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2.8rem;
+    color: #e0ffff;
+    background: none;
+    border: none;
+    z-index: 1001;
+  }
+
+  #navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #002147;
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  #navbar.show {
+    display: flex;
+  }
+
+  #navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  #navbar a {
+    font-size: 2rem;
+    color: #e0ffff;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+
+  #navbar a:hover {
+    background-color: #004080;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .home,
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-img,
+  .about-img {
+    order: -1; /* move image to the top */
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .home-img img,
+  .about-img img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #menu-icon {
+    display: none;
+  }
+  /* #navbar {
+    display: none;
+  }
+  #navbar.show {
+    display: block;
+  } */
 }
